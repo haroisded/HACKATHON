@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Ingredients - 23rd Cafe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-neutral-900">
+    <!-- Sidebar Trigger Zone -->
+    <div id="sidebarTrigger" class="fixed left-0 top-0 h-full w-12 z-30"></div>
+    
+    <!-- Sidebar -->
+    <div id="sidebar" class="fixed left-0 top-0 h-full bg-neutral-800 transition-transform duration-300 ease-in-out z-50 -translate-x-full" style="width: 95px;">
+        <div class="flex flex-col items-center pt-4 space-y-8">
+            <button class="text-white text-2xl p-4">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <button class="text-gray-400 hover:text-white text-2xl p-4">
+                <i class="fas fa-search"></i>
+            </button>
+            
+            <button class="text-gray-400 hover:text-white text-2xl p-4">
+                <i class="fas fa-th"></i>
+            </button>
+            
+            <button class="text-gray-400 hover:text-white text-2xl p-4">
+                <i class="fas fa-lock"></i>
+            </button>
+            
+            <button class="text-gray-400 hover:text-white text-2xl p-4">
+                <i class="fas fa-calendar"></i>
+            </button>
+            
+            <button class="text-gray-400 hover:text-white text-2xl p-4">
+                <i class="fas fa-list"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+
+    <!-- Top Navigation -->
+    <div class="bg-neutral-900 text-white py-6 px-8 flex justify-between items-center">
+        <button class="text-3xl">
+            <i class="fas fa-bars"></i>
+        </button>
+        <h1 class="text-4xl font-bold tracking-wide">23rd Cafe</h1>
+        <div class="flex space-x-4">
+            <button class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center">
+                <i class="fas fa-user"></i>
+            </button>
+            <button class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center">
+                <i class="fas fa-chart-bar"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="bg-stone-200 min-h-screen p-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header Section -->
+            <div class="mb-8">
+                <h2 class="text-5xl font-bold mb-6 leading-tight" style="color: #2b2b2b;">
+                    HOW TO<br/>ADD<br/>MENU
+                </h2>
+                <div class="flex items-start space-x-8 mt-8">
+                    <div class="flex items-start space-x-4 flex-1">
+                        <div class="text-6xl font-bold" style="color: #2b2b2b;">1</div>
+                        <div class="pt-3">
+                            <div class="text-xl" style="color: #2b2b2b;">Select or Create</div>
+                            <div class="text-xl" style="color: #2b2b2b;">Category</div>
+                        </div>
+                    </div>
+                    <div class="w-px h-16 bg-gray-400"></div>
+                    <div class="flex items-start space-x-4 flex-1">
+                        <div class="text-6xl font-bold" style="color: #2b2b2b;">2</div>
+                        <div class="pt-3">
+                            <div class="text-xl" style="color: #2b2b2b;">Add Menu by filling</div>
+                            <div class="text-xl" style="color: #2b2b2b;">up Dish Information</div>
+                        </div>
+                    </div>
+                    <div class="w-px h-16 bg-gray-400"></div>
+                    <div class="flex items-start space-x-4 flex-1">
+                        <div class="text-6xl font-bold" style="color: #2b2b2b;">3</div>
+                        <div class="pt-3">
+                            <div class="text-xl" style="color: #2b2b2b;">Add its Ingredients by</div>
+                            <div class="text-xl" style="color: #2b2b2b;">filling up Ingredients</div>
+                            <div class="text-xl" style="color: #2b2b2b;">Information</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-t-2 border-gray-400 mb-8">
+
+            <!-- Back Button -->
+            <button class="flex items-center space-x-2 mb-6 text-xl font-bold" style="color: #2b2b2b;">
+                <span>&lt;</span>
+                <span>BACK</span>
+            </button>
+
+            <!-- Form Section -->
+            <h3 class="text-4xl font-bold mb-2" style="color: #2b2b2b;">
+                INGREDIENTS OF <span class="italic">(NAME OF DISH)</span>
+            </h3>
+            <h4 class="text-3xl font-bold mb-8" style="color: #2b2b2b;">Ingredients Information</h4>
+
+            <div class="grid grid-cols-2 gap-8">
+                <!-- Left Column -->
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-xl mb-2" style="color: #2b2b2b;">Ingredients Name</label>
+                        <input type="text" placeholder="Name" class="w-full px-4 py-3 border-2 border-gray-800 rounded bg-white text-lg">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xl mb-2" style="color: #2b2b2b;">Unit <span class="italic">(kg, ml)</span></label>
+                            <select class="w-full px-4 py-3 border-2 border-gray-800 rounded bg-white text-lg text-gray-500">
+                                <option>DROPDOWN</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xl mb-2" style="color: #2b2b2b;">Amount</label>
+                            <input type="text" placeholder="Amount" class="w-full px-4 py-3 border-2 border-gray-800 rounded bg-white text-lg">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xl mb-2" style="color: #2b2b2b;">Best Before</label>
+                            <select class="w-full px-4 py-3 border-2 border-gray-800 rounded bg-white text-lg text-gray-500">
+                                <option>CALENDAR DROPDOWN</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xl mb-2" style="color: #2b2b2b;">Expiration Date</label>
+                            <select class="w-full px-4 py-3 border-2 border-gray-800 rounded bg-white text-lg text-gray-500">
+                                <option>CALENDAR DROPDOWN</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-xl mb-2" style="color: #2b2b2b;">Tag Name</label>
+                        <input type="text" placeholder="Tag Name" class="w-full px-4 py-3 border-2 border-gray-800 rounded bg-white text-lg">
+                    </div>
+
+                    <div>
+                        <label class="block text-xl mb-2" style="color: #2b2b2b;">Brand Name</label>
+                        <input type="text" placeholder="Brand Name" class="w-full px-4 py-3 border-2 border-gray-800 rounded bg-white text-lg">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xl mb-2" style="color: #2b2b2b;">Best Price <span class="italic">per kg</span></label>
+                            <input type="text" placeholder="Peso" class="w-full px-4 py-3 border-2 border-gray-800 rounded bg-white text-lg">
+                        </div>
+                        <div>
+                            <label class="block text-xl mb-2" style="color: #2b2b2b;">Bag Name</label>
+                            <input type="text" placeholder="Bag name" class="w-full px-4 py-3 border-2 border-gray-800 rounded bg-white text-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add on Menu Button -->
+            <div class="flex justify-end mt-8">
+                <button class="px-8 py-3 bg-white border-2 border-gray-800 rounded text-xl font-bold hover:bg-gray-100" style="color: #2b2b2b;">
+                    ADD ON MENU
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="sidebar.js"></script>
+</body>
+</html>
